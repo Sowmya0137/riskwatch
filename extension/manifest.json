@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "RiskWatch",
+  "version": "1.0",
+  "description": "Detects harmful or sensitive content on webpages.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://127.0.0.1:5000/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
